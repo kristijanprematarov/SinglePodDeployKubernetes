@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  testapp.webapi:
+    image: ${DOCKER_REGISTRY-}testappwebapi
+    build:
+      context: .
+      dockerfile: TestApp.WebApi/Dockerfile
+
+  testapp.webui:
+    image: ${DOCKER_REGISTRY-}testappwebui
+    build:
+      context: .
+      dockerfile: TestApp.WebUI/Dockerfile
+

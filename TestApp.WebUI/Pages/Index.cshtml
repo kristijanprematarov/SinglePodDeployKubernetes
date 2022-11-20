@@ -1,0 +1,14 @@
+﻿@page
+@using TestApp.WebApi.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var model = ViewData["Joke"] as Joke;
+    var name = model.Name;
+    var text = model.Text;
+}
+
+<div class="text-center">
+    <h2>Name: @name</h2>
+    <h2>Text: @text</h2>
+</div>
